@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dissertation Creator</title>
+    <title>Créateur de Dissertation</title>
     <style>
         body {
             display: flex;
@@ -40,8 +40,8 @@
     </style>
 </head>
 <body>
-    <textarea id="theme" placeholder="Enter a theme for your dissertation..."></textarea>
-    <button id="generate">Generate Dissertation</button>
+    <textarea id="theme" placeholder="Entrez un thème pour votre dissertation..."></textarea>
+    <button id="generate">Générer la Dissertation</button>
     <div id="output" style="margin-top: 20px; width: 80%; font-size: 16px;"></div>
 
     <script>
@@ -50,17 +50,17 @@
             const output = document.getElementById('output');
 
             if (theme.trim() === '') {
-                output.innerHTML = '<p style="color: red;">Please enter a theme.</p>';
+                output.innerHTML = '<p style="color: red;">Veuillez entrer un thème.</p>';
                 return;
             }
 
-            const dissertation = `Here is a dissertation based on the theme: "${theme}". \n\n` +
-                `Introduction:\n\nThe theme of "${theme}" has long been a subject of interest across various disciplines. ` +
-                `This dissertation explores its significance, implications, and potential impacts.` +
-                `\n\nMain Body:\n\nFirst, we delve into the historical context and relevance of "${theme}". ` +
-                `This is followed by an analysis of its current significance in modern society. Finally, potential future developments are considered.` +
-                `\n\nConclusion:\n\nIn conclusion, the exploration of "${theme}" provides valuable insights into its broader implications, ` +
-                `emphasizing the need for ongoing study and engagement.`;
+            const dissertation = `Voici une dissertation basée sur le thème : "${theme}". \n\n` +
+                `Introduction :\n\nLe thème de "${theme}" a longtemps été un sujet d'intérêt dans divers domaines. ` +
+                `Cette dissertation explore son importance, ses implications et ses impacts potentiels.` +
+                `\n\nDéveloppement :\n\nTout d'abord, nous examinerons le contexte historique et la pertinence de "${theme}". ` +
+                `Ensuite, une analyse de son importance actuelle dans la société moderne sera proposée. Enfin, les développements futurs potentiels seront envisagés.` +
+                `\n\nConclusion :\n\nEn conclusion, l'exploration de "${theme}" offre des perspectives précieuses sur ses implications plus larges, ` +
+                `soulignant la nécessité de continuer à l'étudier et à s'y intéresser.`;
 
             output.textContent = dissertation;
         });
